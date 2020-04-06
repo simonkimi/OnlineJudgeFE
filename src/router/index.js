@@ -12,27 +12,27 @@ export default new Router({
     routes: [
         {
             path: '/',
-            redirect: '/problem'
+            redirect: '/dashboard'
         },
         {
             path: '/',
             component: Home,
-            meta: { title: '自述文件' },
+            meta: { title: 'Home' },
             children: [
                 {
                     path: '/dashboard',
                     component: Dashboard,
-                    meta: { title: '系统首页' }
+                    meta: { title: 'Home' }
                 },
                 {
                     path: '/problem',
                     component: Problem,
-                    meta: { title: '问题'},
+                    meta: { title: 'Problem'},
                 },
                 {
                     path: '/problem/:problemId',
                     component: ProblemDetail,
-                    meta: { title: '问题详情' },
+                    meta: { title: 'ProblemDetail' },
                 }
 
             ]
@@ -40,7 +40,7 @@ export default new Router({
         {
             path: '/login',
             component: Login,
-            meta: { title: '登录' }
+            meta: { title: 'Login' }
         },
         {
             path: '*',

@@ -29,7 +29,7 @@
                 <schart class="schart" canvasId="pie" :options="options3"></schart>
             </div>
             <div class="schart-box">
-                <div class="content-title">环形图</div>
+                <div class="content-title">提交</div>
                 <schart class="schart" canvasId="ring" :options="options4"></schart>
             </div>
         </div>

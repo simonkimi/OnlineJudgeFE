@@ -45,6 +45,9 @@ function ajax(url, method, options) {
 
 export default {
     async getProblemList() {
-        return ajax('problems/', 'get')
+        return ajax('problems/', 'get');
+    },
+    async getProblemDetail(problemId) {
+        return ajax(`problems/${problemId}/`, 'get');
     }
 }
