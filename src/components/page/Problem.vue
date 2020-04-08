@@ -40,7 +40,7 @@
                 </el-table-column>
 
                 <el-table-column
-                        label="标题">
+                        label="Title">
                     <template slot-scope="scope">
                         <el-link @click="onProblemClick(scope.row.display_id)">{{scope.row.title}}</el-link>
                     </template>
@@ -50,13 +50,15 @@
 
                 <el-table-column
                         prop="submission_number"
-                        label="提交次数"
-                        width="100">
+                        label="Total Submit"
+                        width="150">
                 </el-table-column>
                 <el-table-column
-                        prop="ac_number"
-                        label="正确率"
-                        width="100">
+                        label="AC Rate"
+                        width="150">
+                    <template slot-scope="scope">
+                        <p>{{parseFloat(scope.row.ac_number/scope.row.submission_number*100).toFixed(2)}}%</p>
+                    </template>
                 </el-table-column>
 
 

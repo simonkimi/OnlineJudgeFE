@@ -22,10 +22,10 @@
                         <p class="problem-content" v-html="problem.description"></p>
 
                         <p class="problem-title">Input</p>
-                        <p class="problem-content" v-html="problem.description_input">测试输入测试输入测试输入</p>
+                        <p class="problem-content" v-html="problem.description_input"></p>
 
                         <p class="problem-title">Output</p>
-                        <p class="problem-content" v-html="problem.description_output">测试输出测试输出测试输出测试输出</p>
+                        <p class="problem-content" v-html="problem.description_output"></p>
 
                         <el-row :gutter="10" v-for="(sample, index) in problem.samples" :key="index">
                             <el-col :span="12">
@@ -143,9 +143,7 @@
                 this.$message.error('加载失败了 QAQ');
                 console.error(err);
             }).then(value => {
-                setInterval(() => {
-                    this.loading = false;
-                }, 300);
+                this.loading = false;
             });
 
         },
